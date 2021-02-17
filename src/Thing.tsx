@@ -1,5 +1,5 @@
 import React, { FC, HTMLAttributes, ReactChild } from 'react';
-import 'twin.macro';
+import tw, { styled } from 'twin.macro';
 
 export interface Props extends HTMLAttributes<HTMLDivElement> {
   /** custom content, defaults to 'the snozzberries taste like snozzberries' */
@@ -12,10 +12,14 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
  * A custom Thing component. Neat!
  */
 
+const StyledThing = styled.div(() => [
+  tw`flex items-center justify-center w-5/6 m-auto text-2xl text-center text-pink-700 uppercase bg-yellow-400 shadow-xl rounded-3xl
+`,
+]);
 export const Thing: FC<Props> = ({ children }) => {
   return (
-    <div tw="flex items-center justify-center w-5/6 m-auto text-2xl text-center text-pink-700 uppercase bg-yellow-400 shadow-xl rounded-3xl">
+    <StyledThing>
       {children || `the snozzberries taste like snozzberries`}
-    </div>
+    </StyledThing>
   );
 };

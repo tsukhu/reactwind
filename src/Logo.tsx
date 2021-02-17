@@ -1,16 +1,17 @@
 import React from 'react';
-import 'twin.macro';
+import tw, { styled } from 'twin.macro';
 
+const StyledAnchor = styled.a(() => [
+  tw`w-32 mb-10 p-5 block opacity-50 hover:opacity-100`,
+]);
 export const Logo = () => (
-  <a
-    // Use the tw prop to add tailwind styles directly on jsx elements
-    tw="w-32 mb-10 p-5 block opacity-50 hover:opacity-100"
+  <StyledAnchor
     href="https://github.com/ben-rogerson/twin.macro"
     target="_blank"
     rel="noopener noreferrer"
   >
     <TwinSvg />
-  </a>
+  </StyledAnchor>
 );
 
 const TwinSvg = () => (

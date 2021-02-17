@@ -20,4 +20,5 @@ SCButton.args = {
   isPrimary: true,
   isSecondary: false,
   isSmall: false,
+  isRounded: false
 };
