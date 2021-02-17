@@ -7,7 +7,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
   isRounded?: Boolean;
 }
 
-export const Button= styled.button(
+export const Button = styled.button(
   ({ isPrimary, isSecondary, isSmall, isRounded }: ButtonProps) => [
     // The common button styles added with the tw import
     tw`px-8 py-2 text-lg rounded focus:outline-none`,
@@ -17,7 +17,8 @@ export const Button= styled.button(
     tw`hover:(scale-105 text-blue-700 dark:text-yellow-400)`,
 
     // Use props to conditionally style your components
-    isPrimary && tw`text-white bg-gray-300 border-black  dark:bg-gray-800 dark:border-gray-300`,
+    isPrimary &&
+      tw`text-white bg-gray-300 border-black  dark:bg-gray-800 dark:border-gray-300`,
 
     // Combine regular css with tailwind classes within backticks
     isSecondary && [
