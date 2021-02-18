@@ -14,7 +14,7 @@ export const Button = styled.button(
     tw`transition-transform duration-75 transform`,
 
     // Use the variant grouping feature to add variants to multiple classes
-    tw`hover:(scale-105 text-blue-700 dark:text-yellow-400)`,
+    tw`hover:(scale-105 text-brand dark:text-yellow-400)`,
 
     // Use props to conditionally style your components
     isPrimary &&
